@@ -1,0 +1,43 @@
+body {
+    font:1.2em/1.62 sans-serif;
+}
+h1,h2,h3 {
+    line-height:1.2;
+}
+@media print{
+    body{
+        max-width:none
+    }
+}
+li {
+    display: inline;
+    padding: 10px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    grid-template-rows: : repeat(4, [row-start] 1fr);
+    grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "footer";
+}
+.header {
+    grid-area: header;
+    grid-row: 1;
+}
+.content {
+    grid-area: content;
+    grid-row: 3;
+    grid-column: col-start 2 / span 2;
+}
+.nav {
+    grid-area: nav;
+    grid-row: 2;
+    grid-column: col-start 2 / span 2;
+}
+.footer {
+    grid-area: footer;
+    grid-row: 4;
+}
