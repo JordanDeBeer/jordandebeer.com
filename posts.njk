@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+title: posts
+---
+
+<ul>
+    {% for page in search.pages("category=posts") %}
+        <li>
+            <a href={{ page.url }}>{{ page.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

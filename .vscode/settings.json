@@ -1,0 +1,7 @@
+{
+  "editor.wordWrap": "off",
+  "editor.wordWrapColumn": 160,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
+}

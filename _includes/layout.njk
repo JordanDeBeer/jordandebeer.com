@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jordan DeBeer - {{ title }}</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/code.light.css" media="screen and (prefers-color-scheme: light)"/>
+        <link rel="stylesheet" href="/code.dark.css" media="screen and (prefers-color-scheme: dark)"/>
+    </head>
+    <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        <div class="container mx-auto px-4 py-8 md:py-16">
+            <header class="mb-10">
+                <nav class="mb-4">
+                    <a href="/index.html" class="text-lg font-semibold">Jordan DeBeer</a><br>
+                    <a href="/posts" class="mr-4">Posts</a>
+                    <a href="/contact" class="mr-4">Contact</a>
+                </nav>
+            </header>
+            <main>
+                {% if page.data.category === "posts" %}
+                    <div class="mb-4 font-semibold">
+                        {{ title }}
+                    </div>
+                {% endif %}
+                {{ content | safe }}
+            </main>
+        </div>
+    </body>
+</html>

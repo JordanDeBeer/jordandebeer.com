@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    @apply hover:text-blue-600 dark:hover:text-blue-400 
+}
+
+p {
+    margin: 20px
+}
+
+code {
+    @apply font-mono
+}
+
+*::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+*::-webkit-scrollbar-track {
+    @apply bg-[#ffffff];
+    @apply dark:bg-neutral-800;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300;
+    @apply dark:bg-neutral-700;
+    border-radius: 14px;
+    border: 5px solid;
+    @apply border-[#ffffff];
+    @apply dark:border-neutral-800;
+}
